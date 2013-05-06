@@ -19,7 +19,10 @@ import com.elfin.ui.MainDialog;
 
 /**
  * 程序入口函数
- * @author Jack_Tan
+ * 
+ * @author JasonTan
+ * E-mail: tankle120@gmail.com
+ * Create on：2013-5-6 下午5:00:24 
  *
  */
 public class Main {
