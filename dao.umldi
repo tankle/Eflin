@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_tP74ML4XEeKYxK9LPjkLwA" activeDiagram="_tP8fQL4XEeKYxK9LPjkLwA">
+  <model href="dao.uml#_qb8akM37EdqwVrslYOdUDA"/>
+  <diagrams xmi:id="_tP8fQL4XEeKYxK9LPjkLwA" position="0,0" size="100,100" name="dao" viewport="0,-4">
+    <property xmi:id="_tSom4L4XEeKYxK9LPjkLwA" key="pageFormatName" value="A4"/>
+    <property xmi:id="_tSom4b4XEeKYxK9LPjkLwA" key="diagramWidth" value="840"/>
+    <property xmi:id="_tSom4r4XEeKYxK9LPjkLwA" key="diagramHeight" value="1188"/>
+    <property xmi:id="_tSom474XEeKYxK9LPjkLwA" key="pageMarginName" value="Small Margin"/>
+    <property xmi:id="_tSom5L4XEeKYxK9LPjkLwA" key="diagramTopMargin" value="20"/>
+    <property xmi:id="_tSom5b4XEeKYxK9LPjkLwA" key="diagramBottomMargin" value="20"/>
+    <property xmi:id="_tSom5r4XEeKYxK9LPjkLwA" key="diagramLeftMargin" value="20"/>
+    <property xmi:id="_tSom574XEeKYxK9LPjkLwA" key="diagramRightMargin" value="20"/>
+    <property xmi:id="_tSom6L4XEeKYxK9LPjkLwA" key="orientation" value="portrait"/>
+    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_tP8fQb4XEeKYxK9LPjkLwA" presentation="org.topcased.modeler.uml.classdiagram">
+      <element href="dao.uml#_qb8akM37EdqwVrslYOdUDA"/>
+    </semanticModel>
+    <contained xsi:type="di:GraphNode" xmi:id="_uHAqIL4XEeKYxK9LPjkLwA" position="35,34" size="431,282">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_uHAqIb4XEeKYxK9LPjkLwA">
+        <element href="dao.uml#_uAAqQL4XEeKYxK9LPjkLwA"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_uHOskL4XEeKYxK9LPjkLwA" position="15,11" size="401,221">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_uHOskb4XEeKYxK9LPjkLwA">
+          <element href="dao.uml#_uAAqQb4XEeKYxK9LPjkLwA"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_uHQhwL4XEeKYxK9LPjkLwA" position="15,11" size="371,160">
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_uHQhwb4XEeKYxK9LPjkLwA">
+            <element href="dao.uml#_uAAqQr4XEeKYxK9LPjkLwA"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_uHRv4L4XEeKYxK9LPjkLwA" position="15,11" size="341,-1">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_uHRv4b4XEeKYxK9LPjkLwA">
+              <element href="dao.uml#_uABRUL4XEeKYxK9LPjkLwA"/>
+            </semanticModel>
+            <contained xsi:type="di:GraphNode" xmi:id="_uHRv4r4XEeKYxK9LPjkLwA">
+              <property xmi:id="_uHRv474XEeKYxK9LPjkLwA" key="eStructuralFeatureID" value="37"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_uHRv5L4XEeKYxK9LPjkLwA">
+                <element href="dao.uml#_uABRUL4XEeKYxK9LPjkLwA"/>
+              </semanticModel>
+              <contained xsi:type="di:GraphNode" xmi:id="_uHRv5b4XEeKYxK9LPjkLwA" position="176,126">
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_uHRv5r4XEeKYxK9LPjkLwA">
+                  <element href="dao.uml#_uDrCQL4XEeKYxK9LPjkLwA"/>
+                </semanticModel>
+              </contained>
+            </contained>
+            <contained xsi:type="di:GraphNode" xmi:id="_uHRv574XEeKYxK9LPjkLwA">
+              <property xmi:id="_uHRv6L4XEeKYxK9LPjkLwA" key="eStructuralFeatureID" value="47"/>
+              <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_uHRv6b4XEeKYxK9LPjkLwA">
+                <element href="dao.uml#_uABRUL4XEeKYxK9LPjkLwA"/>
+              </semanticModel>
+              <contained xsi:type="di:GraphNode" xmi:id="_uHRv6r4XEeKYxK9LPjkLwA" position="176,126">
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_uHRv674XEeKYxK9LPjkLwA">
+                  <element href="dao.uml#_uD2ocL4XEeKYxK9LPjkLwA"/>
+                </semanticModel>
+              </contained>
+              <contained xsi:type="di:GraphNode" xmi:id="_uHRv7L4XEeKYxK9LPjkLwA" position="176,126">
+                <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_uHRv7b4XEeKYxK9LPjkLwA">
+                  <element href="dao.uml#_uD3PgL4XEeKYxK9LPjkLwA"/>
+                </semanticModel>
+              </contained>
+            </contained>
+          </contained>
+        </contained>
+      </contained>
+    </contained>
+  </diagrams>
+</diagrams:Diagrams>

@@ -24,8 +24,11 @@ import javax.swing.event.ChangeListener;
 
 import weibo4j.model.User;
 
+import com.elfin.main.Main;
 import com.elfin.oauth.OAuth2Code;
 import com.elfin.ui.OneUser.UserType;
+import com.elfin.util.FileUtil;
+import com.elfin.util.WeiboConstants;
 
 /**
  * 程序主界面
@@ -41,7 +44,7 @@ public class MainDialog extends JDialog{
 	private final static boolean[] arrayOfTab = { true, false, false, false,
 		false, false, false};
 	private JTabbedPane tabbedPane;
-	
+	private PersonalInform personMsg = null;
 
 
 	public MainDialog(User user) {
@@ -52,7 +55,7 @@ public class MainDialog extends JDialog{
 			e.printStackTrace();
 		}
 		
-		setTitle("Eflin新浪微博客户端开发第六步@桌面小精灵");
+		setTitle(WeiboConstants.MAIN_TITLE);
 		
 		//显示个人信息，主界面上面部分
 		//setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
@@ -68,7 +71,7 @@ public class MainDialog extends JDialog{
 		Dimension dm = Toolkit.getDefaultToolkit().getScreenSize();
 		setLocation(dm.width - WIDTH - 100, dm.height - HEIGHT - 80);
 		
-		JPanel personMsg = new PersonalInform(user);
+		personMsg = new PersonalInform(user);
 		personMsg.setBounds(0,0,485,95);
 		add(personMsg);
 		
@@ -81,8 +84,11 @@ public class MainDialog extends JDialog{
 		
 		
 	}
-
-
+//
+//	public void reStart(User user) {
+//		personMsg.refreshInfo(user);
+//	}
+//	
 	@SuppressWarnings("deprecation")
 	@Override
 	protected void processWindowEvent(WindowEvent e) {
@@ -166,6 +172,9 @@ public class MainDialog extends JDialog{
 	 */
 	private PopupMenu createMenu() { // 创建系统栏菜单的方法
 		PopupMenu menu = new PopupMenu();
+		/**
+		 * 
+		 */
 		MenuItem openItem = new MenuItem(WeiboConstants.OPEN);
 		openItem.addActionListener(new ActionListener() {// 系统栏打开菜单项事件
 					public void actionPerformed(ActionEvent e) {
@@ -176,13 +185,25 @@ public class MainDialog extends JDialog{
 							toFront();
 					}
 				});
+		/**
+		 * 退出选项
+		 */
 		MenuItem logoffItem = new MenuItem(WeiboConstants.LOGOUT);
 		logoffItem.addActionListener(new ActionListener() {// 系统栏注销菜单项事件
 					public void actionPerformed(ActionEvent e) {
 						JOptionPane
 						.showMessageDialog(null, "还没添加注销的功能！");
+//						FileUtil.deleteToken();
+//						OAuth2Code.getMainDialog().setVisible(false);
+////						new LoginView();
+//						
+//						Main.login.start();
+						
 					}
 				});
+		/**
+		 * 关于软件选项
+		 */
 		MenuItem aboutItem = new MenuItem(WeiboConstants.ABOUT);
 		aboutItem.addActionListener(new ActionListener() {// 系统栏注销菜单项事件
 					public void actionPerformed(ActionEvent e) {
@@ -192,6 +213,9 @@ public class MainDialog extends JDialog{
 										+ "All Rights Reserved");
 					}
 				});
+		/**
+		 * 退出选项
+		 */
 		MenuItem exitItem = new MenuItem(WeiboConstants.EXIT);
 		exitItem.addActionListener(new ActionListener() { // 系统栏退出事件
 					public void actionPerformed(ActionEvent e) {
@@ -219,6 +243,10 @@ public class MainDialog extends JDialog{
 		this.tabbedPane = tabbedPane;
 	}
 	
+	/**
+	 * 第一次点击主界面上的按钮
+	 *
+	 */
 	private class FirstClick extends Thread {
 		private static final int MYCOMMENT = 1;
 		private static final int METIONS = 2;
@@ -256,5 +284,7 @@ public class MainDialog extends JDialog{
 		}
 
 	}
+
+
 
 }

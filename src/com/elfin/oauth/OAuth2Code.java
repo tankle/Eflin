@@ -20,9 +20,16 @@ import chrriis.dj.nativeswing.swtimpl.components.JWebBrowser;
 import chrriis.dj.nativeswing.swtimpl.components.WebBrowserAdapter;
 import chrriis.dj.nativeswing.swtimpl.components.WebBrowserNavigationEvent;
 
-import com.elfin.dao.AccessTokenDao;
 import com.elfin.ui.MainDialog;
+import com.elfin.util.FileUtil;
 
+/**
+ * 
+ * @author Jason Tan
+ * E-mail: tankle120@gmail.com
+ * Create on：2013-5-16
+ *
+ */
 public class OAuth2Code {
 	private final static String CODE = "?code=";
 	private static MainDialog mainDialog;
@@ -86,7 +93,7 @@ public class OAuth2Code {
 				if (accessToken == null) {
 					return;
 				}
-				AccessTokenDao.write(accessToken);
+				FileUtil.write(accessToken);
 				Log.logInfo("授权成功...");
 				try {
 					init(accessToken);
@@ -115,6 +122,10 @@ public class OAuth2Code {
 		}
 		Users um = new Users();
 		user = um.showUserById(uid);
+//		if(null != mainDialog){
+//			mainDialog.reStart(user);
+//			
+//		}
 		mainDialog = new MainDialog(user);
 	}
 

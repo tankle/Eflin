@@ -12,6 +12,7 @@ import weibo4j.model.Favorites;
 import weibo4j.model.FavoritesTag;
 import weibo4j.model.Paging;
 import weibo4j.model.WeiboException;
+import weibo4j.util.Log;
 
 import com.elfin.ui.OneStatus.StatusType;
 
@@ -27,13 +28,14 @@ public class MyFavorites extends WeiboPanel {
 	private static final long serialVersionUID = -4115623666915286133L;
 
 	private static final String ALL_FAVORITES = "全部收藏";
-	private Favorite fv;
+	private Favorite fv;		//用户的收藏列表
 	private FavoritesTag favoritesTag;//用于收藏时
-	private List<FavoritesTag> favoritesTags;
+	private List<FavoritesTag> favoritesTags;	//评论标签
 	private JComboBox comboBox;
 	
 	public MyFavorites() {
 		super();
+		
 		initComboBox();
 		init();
 	}
@@ -59,6 +61,10 @@ public class MyFavorites extends WeiboPanel {
 		}
 		for (Favorites f : favors) {
 			f.getStatus().setFavorited(true);
+			if(null == f.getStatus().getUser()){
+				Log.logInfo("the user is null " + f.toString());
+				continue;
+			}
 			OneStatus oneStatus = new OneStatus(f, StatusType.FAVORITE);
 			add(oneStatus, gbc);
 			++gbc.gridy;
@@ -69,7 +75,10 @@ public class MyFavorites extends WeiboPanel {
 	}
 	
 	/**
+	 * 初始化comobox
 	 * 
+	 * 首先获取用户的所有标签List
+	 * 然后以此来初始化combox
 	 */
 	private void initComboBox(){
 		try {
@@ -98,7 +107,7 @@ public class MyFavorites extends WeiboPanel {
 					favoritesTag = favoritesTags.get(index);
 					page = 1;
 					gbc.gridy = 0;
-					setLoading(true);
+//					setLoading(true);
 					addList();
 				}
 			}

@@ -14,6 +14,7 @@ import weibo4j.model.User;
 
 import com.elfin.oauth.OAuth2Code;
 import com.elfin.ui.OneUser.UserType;
+import com.elfin.util.WeiboConstants;
 
 /**
  * 非登录用户的个人信息界面+微博界面

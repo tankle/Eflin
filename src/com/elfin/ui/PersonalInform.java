@@ -12,26 +12,52 @@ import com.elfin.oauth.OAuth2Code;
 /**
  * 用于放置个人信息的JPane
  * 
- * @author Jack_Tan
+ * @author Jason Tan
+ * E-mail: tankle120@gmail.com
+ * Create on：2013-5-17
  *
  */
 public class PersonalInform extends JPanel{
 	
 	private static final long serialVersionUID = -9114776723837074171L;
 	private User user;
+	private Thread initThread = null;
 	
 	public PersonalInform(User user){
 		this.user = user;
 		setLayout(null);
-		new Thread(){
+		
+		initThread = new Thread(){
 			@Override
 			public void run() {
 				init();
 			}
 			
-		}.start();
+		};
+		
+		initThread.start();
 	}
 	
+	public User getUser() {
+		return user;
+	}
+	
+	public void setUser(User user) {
+		this.user = user;
+	}
+//	
+//	public void refreshInfo(User user){
+//		setUser(user);
+//		
+////		if(initThread.isAlive()){
+////			initThread.start();
+////		}
+//		initThread.start();
+//	}
+//	
+	/**
+	 * 启动一个新的线程来更新消息
+	 */
 	private void init() {
 		//头像
 		UserHeadImg userHead = new UserHeadImg(user);

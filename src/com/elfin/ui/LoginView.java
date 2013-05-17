@@ -20,11 +20,18 @@ import weibo4j.util.Log;
 import chrriis.common.UIUtils;
 import chrriis.dj.nativeswing.swtimpl.NativeInterface;
 
-import com.elfin.dao.AccessTokenDao;
 import com.elfin.oauth.OAuth2Code;
-import com.elfin.ui.WeiboConstants;
+import com.elfin.util.FileUtil;
+import com.elfin.util.WeiboConstants;
 
-
+/**
+ * 登陆界面
+ * 
+ * @author Jason Tan
+ * E-mail: tankle120@gmail.com
+ * Create on：2013-5-16
+ *
+ */
 public class LoginView extends JFrame {
 
 	private static final int WIDTH = 300;
@@ -41,7 +48,7 @@ public class LoginView extends JFrame {
 		init();
 	}
 
-	private void init() {
+	public void init() {
 		this.setTitle("登录");
 		this.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 	
@@ -63,8 +70,15 @@ public class LoginView extends JFrame {
 
 		this.setContentPane(content);
 
-		auth = new JButton("授权");
-	//	auth.setSize(50, 20);
+		auth = new JButton();
+		
+		String accessToken = FileUtil.read();
+		Log.logInfo("The access token is " +accessToken);
+		if(null != accessToken && "" != accessToken){
+			auth.setText("登陆");
+		}else{
+			auth.setText("授权");
+		}
 
 		content.add(auth,BorderLayout.CENTER);
 
@@ -83,13 +97,16 @@ public class LoginView extends JFrame {
 
 	protected void getToken() {
 		this.dispose();
-
+		
+//		this.setVisible(false);
+//		
 		new Thread() {
 			@Override
 			public void run() {
-				Log.logInfo("Logining...");
-				String accessToken = AccessTokenDao.read();
-				if (accessToken != null) {
+				
+				String accessToken = FileUtil.read();
+				Log.logInfo("Logining... The access token is " + accessToken );
+				if (accessToken != null && "" != accessToken) {
 					try {
 						new OAuth2Code(accessToken);
 						return;
@@ -99,6 +116,8 @@ public class LoginView extends JFrame {
 						}
 						JOptionPane.showMessageDialog(null,
 								"提供的Access Grant是无效的、过期的或已撤销的。需要再次授权");
+						//删除token
+						FileUtil.deleteToken();
 					}
 
 				}
@@ -116,6 +135,10 @@ public class LoginView extends JFrame {
 
 		}.start();
 	}
+//
+//	public void start() {
+//		this.setVisible(true);
+//	}
 
 
 }

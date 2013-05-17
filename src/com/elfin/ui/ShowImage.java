@@ -28,6 +28,8 @@ import javax.swing.JPopupMenu;
 import javax.swing.SwingUtilities;
 import javax.swing.event.MouseInputListener;
 
+import com.elfin.util.WeiboConstants;
+
 import weibo4j.util.BareBonesBrowserLaunch;
 
 /**

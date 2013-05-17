@@ -21,7 +21,9 @@ import com.elfin.oauth.OAuth2Code;
 /**
  * 放置一条微博的JPanel
  * 
- * @author Jack_Tan
+ * @author Jason Tan
+ * E-mail: tankle120@gmail.com
+ * Create on：2013-5-17
  *
  */
 public class OneStatus extends OnePanel{

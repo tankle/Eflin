@@ -24,7 +24,7 @@ public abstract class CommentPanel extends WeiboPanel {
 	protected Comments comments = new Comments();
 	protected CommentType type;
 	protected JComboBox comboBox;
-	protected Thread thread;
+//	protected Thread thread;
 	
 	
 	protected CommentPanel(){

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="dao">
+  <packagedElement xmi:type="uml:Package" xmi:id="_uAAqQL4XEeKYxK9LPjkLwA" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_uAAqQb4XEeKYxK9LPjkLwA" name="elfin">
+      <packagedElement xmi:type="uml:Package" xmi:id="_uAAqQr4XEeKYxK9LPjkLwA" name="dao">
+        <packagedElement xmi:type="uml:Class" xmi:id="_uABRUL4XEeKYxK9LPjkLwA" name="AccessTokenDao">
+          <ownedAttribute xmi:id="_uDrCQL4XEeKYxK9LPjkLwA" name="USERS" visibility="private" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_uDrCQb4XEeKYxK9LPjkLwA" value="data/users.wb"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_uD2ocL4XEeKYxK9LPjkLwA" name="write" visibility="public" isStatic="true">
+            <ownedParameter xmi:id="_uD2ocb4XEeKYxK9LPjkLwA" name="objects">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_uD3PgL4XEeKYxK9LPjkLwA" name="read" visibility="public" isStatic="true">
+            <ownedParameter xmi:id="_uD3Pgb4XEeKYxK9LPjkLwA" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_uCOQwL4XEeKYxK9LPjkLwA" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_uCOQwb4XEeKYxK9LPjkLwA" name="io">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_uCOQwr4XEeKYxK9LPjkLwA" name="EOFException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_uCOQw74XEeKYxK9LPjkLwA" name="FileInputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_uCOQxL4XEeKYxK9LPjkLwA" name="FileOutputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_uCOQxb4XEeKYxK9LPjkLwA" name="IOException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_uCOQxr4XEeKYxK9LPjkLwA" name="ObjectInputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_uCOQx74XEeKYxK9LPjkLwA" name="ObjectOutputStream"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_uCOQyL4XEeKYxK9LPjkLwA" name="weibo4j">
+    <packagedElement xmi:type="uml:Package" xmi:id="_uCOQyb4XEeKYxK9LPjkLwA" name="util">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_uCOQyr4XEeKYxK9LPjkLwA" name="Log"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

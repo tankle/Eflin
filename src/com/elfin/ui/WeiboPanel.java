@@ -20,8 +20,8 @@ public abstract class WeiboPanel extends JPanel implements Runnable{
 	protected boolean loading;
 	protected TipDialog tip;
 	protected GridBagConstraints gbc;
-	protected int page;
-	protected Thread thread;
+	protected int page;			//
+	protected Thread thread;	//用来加载信息的线程
 	
 	public WeiboPanel() {
 		super();

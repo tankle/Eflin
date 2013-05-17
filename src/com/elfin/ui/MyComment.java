@@ -15,7 +15,9 @@ import weibo4j.model.WeiboException;
 /**
  * 我的评论
  * 
- * @author Jack_Tan
+ * @author Jason Tan
+ * E-mail: tankle120@gmail.com
+ * Create on：2013-5-17
  *
  */
 public class MyComment extends CommentPanel {
@@ -74,7 +76,7 @@ public class MyComment extends CommentPanel {
 					selectedItem = (String) comboBox.getSelectedItem();
 					page = 1;
 					gbc.gridy = 0;
-					setLoading(true);
+//					setLoading(true);
 					addList();
 				}
 			}
