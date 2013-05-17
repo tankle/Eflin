@@ -1,10 +1,10 @@
 <<<<<<< HEAD
-*.jar
+
 =======
 *.class
 
 # Package Files #
-*.jar
+
 *.war
 *.ear
 >>>>>>> 7899fcbaec397d19b8075bc6675473920a0bcc7f
