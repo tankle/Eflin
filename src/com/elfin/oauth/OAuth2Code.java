@@ -59,7 +59,7 @@ public class OAuth2Code {
 		
 		Dimension dm = Toolkit.getDefaultToolkit().getScreenSize();
 		
-		dialog.setLocation(dm.width/2 - 100, dm.height- 100);
+		dialog.setLocation((dm.width/2) - 200, dm.height/2 - 200);
 		
 	}
 
@@ -67,6 +67,10 @@ public class OAuth2Code {
 		init(accessToken);
 	}
 
+	/**
+	 *  使用自行的 webBrowser
+	 * @return
+	 */
 	private JWebBrowser getWebBrowser() {
 		JWebBrowser webBrowser = new JWebBrowser();
 		webBrowser.setBarsVisible(false);
